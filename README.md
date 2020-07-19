@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# PackageR
+# PackageR <a href='http://packager.arawles.co.uk'><img src='man/figures/logo.png' align="right" height="139" style = "margin-left: 5px;" /></a>
 
 <!-- badges: start -->
 
@@ -34,7 +34,7 @@ graphics showing you a bit more about your package:
 plot_function_length()
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-1-1.png" width="100%" />
 
 To access the data in a more raw format, use the `list_functions()` and
 `list_x_files()` functions:
@@ -121,7 +121,6 @@ By setting the `info` parameter to TRUE, you can retrieve more
 information about the functions:
 
 ``` r
-
 list_functions(info = TRUE)[[1]]
 #> $name
 #> [1] "file_length"

@@ -4,16 +4,17 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%")
-  devtools::load_all()
+devtools::load_all()
 ```
 
-# PackageR
+
+# PackageR <a href='http://packager.arawles.co.uk'><img src='man/figures/logo.png' align="right" height="139" style = "margin-left: 5px;" /></a>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -48,6 +49,5 @@ list_r_files()
 By setting the `info` parameter to TRUE, you can retrieve more information about the functions:
 
 ```{r}
-
 list_functions(info = TRUE)[[1]]
 ```
