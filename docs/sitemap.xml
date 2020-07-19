@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://packager.arawles.co.uk/index.html</loc>
+  </url>
+  <url>
+    <loc>http://packager.arawles.co.uk/reference/file_length.html</loc>
+  </url>
+  <url>
+    <loc>http://packager.arawles.co.uk/reference/function_body.html</loc>
+  </url>
+  <url>
+    <loc>http://packager.arawles.co.uk/reference/function_length.html</loc>
+  </url>
+  <url>
+    <loc>http://packager.arawles.co.uk/reference/function_list_to_tibble.html</loc>
+  </url>
+  <url>
+    <loc>http://packager.arawles.co.uk/reference/language_to_character.html</loc>
+  </url>
+  <url>
+    <loc>http://packager.arawles.co.uk/reference/list_functions.html</loc>
+  </url>
+  <url>
+    <loc>http://packager.arawles.co.uk/reference/list_r_files.html</loc>
+  </url>
+  <url>
+    <loc>http://packager.arawles.co.uk/reference/list_to_function_list.html</loc>
+  </url>
+  <url>
+    <loc>http://packager.arawles.co.uk/reference/plot_function_length.html</loc>
+  </url>
+</urlset>
