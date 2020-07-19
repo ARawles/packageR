@@ -1,1 +1,21 @@
 destination: docs
+authors:
+  Adam Rawles:
+    href: http://arawles.co.uk
+url: http://packager.arawles.co.uk
+navbar:
+  structure:
+    left: [home, intro, reference, changelog]
+    right: [github, arawles]
+  title: faviconGeneratoR
+  components:
+    arawles:
+      icon: "fa-address-card"
+      href: http://arawles.co.uk
+    github:
+      icon: "fa-github"
+      href: https://github.com/arawles/packager
+home:
+  links:
+  - text: Browse source code
+    href: https://github.com/arawles/packager
