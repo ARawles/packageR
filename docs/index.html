@@ -69,13 +69,105 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<p>You can install the development version from <a href="https://github.com/ARawles/PackageR">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("devtools")</span>
 <span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"ARawles/packageR"</span>)</pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
+<p>To get a high-level understanding of the functions and files in your package, use the <code>plot_</code> functions. These functions will produce ggplot2 graphics showing you a bit more about your package:</p>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="fu">plot_function_length</span>()</pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-2-1.png" width="100%"></p>
+<p>To access the data in a more raw format, use the <code><a href="reference/list_functions.html">list_functions()</a></code> and <code>list_x_files()</code> functions:</p>
+<div class="sourceCode" id="cb3"><pre class="r">
+<span class="fu"><a href="reference/list_functions.html">list_functions</a></span>()
+<span class="co">#&gt; [[1]]</span>
+<span class="co">#&gt; [[1]]$name</span>
+<span class="co">#&gt; [1] "file_length"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[2]]</span>
+<span class="co">#&gt; [[2]]$name</span>
+<span class="co">#&gt; [1] "function_body"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[3]]</span>
+<span class="co">#&gt; [[3]]$name</span>
+<span class="co">#&gt; [1] "function_info"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[4]]</span>
+<span class="co">#&gt; [[4]]$name</span>
+<span class="co">#&gt; [1] "function_length"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[5]]</span>
+<span class="co">#&gt; [[5]]$name</span>
+<span class="co">#&gt; [1] "function_list_to_tibble"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[6]]</span>
+<span class="co">#&gt; [[6]]$name</span>
+<span class="co">#&gt; [1] "language_to_character"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[7]]</span>
+<span class="co">#&gt; [[7]]$name</span>
+<span class="co">#&gt; [1] "library.dynam.unload"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[8]]</span>
+<span class="co">#&gt; [[8]]$name</span>
+<span class="co">#&gt; [1] "list_functions"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[9]]</span>
+<span class="co">#&gt; [[9]]$name</span>
+<span class="co">#&gt; [1] "list_r_files"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[10]]</span>
+<span class="co">#&gt; [[10]]$name</span>
+<span class="co">#&gt; [1] "list_to_function_list"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[11]]</span>
+<span class="co">#&gt; [[11]]$name</span>
+<span class="co">#&gt; [1] "plot_function_length"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[12]]</span>
+<span class="co">#&gt; [[12]]$name</span>
+<span class="co">#&gt; [1] "system.file"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[13]]</span>
+<span class="co">#&gt; [[13]]$name</span>
+<span class="co">#&gt; [1] "total_function_count"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; [[14]]</span>
+<span class="co">#&gt; [[14]]$name</span>
+<span class="co">#&gt; [1] "total_function_length"</span>
+
+<span class="fu"><a href="reference/list_r_files.html">list_r_files</a></span>()
+<span class="co">#&gt; [1] "man-roxygen/pkg.R" "R/files.R"         "R/functions.R"    </span>
+<span class="co">#&gt; [4] "R/ne_utility.R"    "R/plot.R"          "R/total.R"        </span>
+<span class="co">#&gt; [7] "R/utility.R"</span></pre></div>
+<p>By setting the <code>info</code> parameter to TRUE, you can retrieve more information about the functions:</p>
+<div class="sourceCode" id="cb4"><pre class="r">
+<span class="fu"><a href="reference/list_functions.html">list_functions</a></span>(<span class="kw">info</span> <span class="kw">=</span> <span class="fl">TRUE</span>)<span class="kw">[[</span><span class="fl">1</span>]]
+<span class="co">#&gt; $name</span>
+<span class="co">#&gt; [1] "file_length"</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $body</span>
+<span class="co">#&gt; {</span>
+<span class="co">#&gt;     length(readLines(path))</span>
+<span class="co">#&gt; }</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $length</span>
+<span class="co">#&gt; [1] 1</span></pre></div>
 </div>
 </div>
   </div>
