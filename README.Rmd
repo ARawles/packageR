@@ -9,8 +9,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
-)
+  out.width = "100%")
+  devtools::load_all()
 ```
 
 # PackageR
@@ -22,7 +22,7 @@ The goal of PackageR is to to help users better understand their package. When d
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/ARawles/PackageR) with:
 
 ``` r
 # install.packages("devtools")
@@ -30,4 +30,24 @@ devtools::install_github("ARawles/packageR")
 ```
 ## Example
 
+To get a high-level understanding of the functions and files in your package, use the `plot_` functions. These functions will produce ggplot2 graphics showing you a bit more about your package:
 
+```{r}
+plot_function_length()
+```
+
+To access the data in a more raw format, use the `list_functions()` and `list_x_files()` functions:
+
+```{r}
+
+list_functions()
+
+list_r_files()
+```
+
+By setting the `info` parameter to TRUE, you can retrieve more information about the functions:
+
+```{r}
+
+list_functions(info = TRUE)[[1]]
+```
