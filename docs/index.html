@@ -5,15 +5,21 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What the Package Does (Title Case) • PackageR</title>
+<title>Better Understand Your Package • PackageR</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="What the Package Does (Title Case)">
-<meta property="og:description" content="More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.">
+<script src="pkgdown.js"></script><meta property="og:title" content="Better Understand Your Package">
+<meta property="og:description" content="Collection of functions to analyse the content of a package, including functions and files.">
+<meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -60,9 +66,10 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="packager" class="section level1">
+<div id="packager-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#packager" class="anchor"></a>PackageR</h1></div>
+<a href="#packager-" class="anchor"></a>PackageR <a href="http://packager.arawles.co.uk"><img src="reference/figures/logo.png" align="right" height="139" style="margin-left: 5px;"></a>
+</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>The goal of PackageR is to to help users better understand their package. When developing R packages, it’s easy to lose track of the scale of the project. This package provides functions to give developers a better insight into the number of functions, files, and their length. From here, developers can work to identify overly-complex functions or chokepoints and eventually write cleaner code.</p>
@@ -77,8 +84,8 @@
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>To get a high-level understanding of the functions and files in your package, use the <code>plot_</code> functions. These functions will produce ggplot2 graphics showing you a bit more about your package:</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu">plot_function_length</span>()</pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-2-1.png" width="100%"></p>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="reference/plot_function_length.html">plot_function_length</a></span>()</pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-1-1.png" width="100%"></p>
 <p>To access the data in a more raw format, use the <code><a href="reference/list_functions.html">list_functions()</a></code> and <code>list_x_files()</code> functions:</p>
 <div class="sourceCode" id="cb3"><pre class="r">
 <span class="fu"><a href="reference/list_functions.html">list_functions</a></span>()
@@ -156,8 +163,7 @@
 <span class="co">#&gt; [4] "R/ne_utility.R"    "R/plot.R"          "R/total.R"        </span>
 <span class="co">#&gt; [7] "R/utility.R"</span></pre></div>
 <p>By setting the <code>info</code> parameter to TRUE, you can retrieve more information about the functions:</p>
-<div class="sourceCode" id="cb4"><pre class="r">
-<span class="fu"><a href="reference/list_functions.html">list_functions</a></span>(<span class="kw">info</span> <span class="kw">=</span> <span class="fl">TRUE</span>)<span class="kw">[[</span><span class="fl">1</span>]]
+<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="reference/list_functions.html">list_functions</a></span>(<span class="kw">info</span> <span class="kw">=</span> <span class="fl">TRUE</span>)<span class="kw">[[</span><span class="fl">1</span>]]
 <span class="co">#&gt; $name</span>
 <span class="co">#&gt; [1] "file_length"</span>
 <span class="co">#&gt; </span>
@@ -176,13 +182,13 @@
     <div class="license">
 <h2>License</h2>
 <ul class="list-unstyled">
-<li>What license is it under?</li>
+<li>GPL (&gt;= 2)</li>
 </ul>
 </div>
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>The package maintainer <br><small class="roles"> Maintainer </small>  </li>
+<li>Adam Rawles <br><small class="roles"> Author, maintainer </small>  </li>
 </ul>
 </div>
 
@@ -191,7 +197,7 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by The package maintainer.</p>
+  <p>Developed by Adam Rawles.</p>
 </div>
 
 <div class="pkgdown">
